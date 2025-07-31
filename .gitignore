@@ -1,6 +1,9 @@
 # Node dependencies
 **/node_modules/
 
+# Text Files For Testing Purpose
+**/temp.txt
+
 # Logs
 *.log
 npm-debug.log*
@@ -29,3 +32,4 @@ coverage/
 
 # Others
 *.swp
+

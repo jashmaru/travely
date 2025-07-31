@@ -1,16 +1,16 @@
-import img1 from "./assets/Carousel/greece.jpg";
-import img2 from "./assets/Carousel/italy.jpg";
-import img3 from "./assets/Carousel/maldive.jpg";
-import img4 from "./assets/Carousel/waterfall.jpg";
-import img5 from "./assets/Carousel/austria2.jpg";
-import img6 from "./assets/Carousel/austria.jpg";
-import img7 from "./assets/Carousel/bali.jpg";
-import img8 from "./assets/Carousel/romania.jpg";
+import img1 from "./assets/Carousel/greece.webp";
+import img2 from "./assets/Carousel/italy.webp";
+import img3 from "./assets/Carousel/maldive.webp";
+import img4 from "./assets/Carousel/waterfall.webp";
+import img5 from "./assets/Carousel/austria2.webp";
+import img6 from "./assets/Carousel/austria.webp";
+import img7 from "./assets/Carousel/bali.webp";
+
 import { useEffect, useState } from "react";
 
 export default function HeroSection()
 {
-    const images = [img1,img2,img3,img4,img5,img6,img7,img8];
+    const images = [img1,img2,img3,img4,img5,img6,img7];
     const [currentImage,setImage] = useState(0);
 
     useEffect(()=>{
@@ -30,7 +30,7 @@ export default function HeroSection()
             <div className="Hero-Section flex items-center justify-center
              w-[100vw] h-[87vh] overflow-hidden relative ">
                 {images.map((img,index)=>{
-                   return( <img key={index} src={img} className={` absolute object-cover w-full h-full transition-opacity 
+                   return( <img key={index} src={img} loading="lazy" className={` absolute object-cover w-full h-full transition-opacity 
                     duration-[3000ms] ease-in-out ${ index === currentImage ? "opacity-100 " : "opacity-0 z-[-1]" }`} />)
                 })}
                 {/*This Is Overlay Effect That Makes Image Liitle Dark */}

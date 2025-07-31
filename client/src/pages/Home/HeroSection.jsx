@@ -1,0 +1,56 @@
+import img1 from "./assets/Carousel/greece.jpg";
+import img2 from "./assets/Carousel/italy.jpg";
+import img3 from "./assets/Carousel/maldive.jpg";
+import img4 from "./assets/Carousel/waterfall.jpg";
+import img5 from "./assets/Carousel/austria2.jpg";
+import img6 from "./assets/Carousel/austria.jpg";
+import img7 from "./assets/Carousel/bali.jpg";
+import img8 from "./assets/Carousel/romania.jpg";
+import { useEffect, useState } from "react";
+
+export default function HeroSection()
+{
+    const images = [img1,img2,img3,img4,img5,img6,img7,img8];
+    const [currentImage,setImage] = useState(0);
+
+    useEffect(()=>{
+        
+        const interval =  setInterval(() => {
+            setImage((prev)=>{
+               return ((prev + 1) % images.length)
+            })
+        }, 5000)
+
+        return()=>clearInterval(interval)
+        
+    },[])
+
+    return(
+        <>
+            <div className="Hero-Section flex items-center justify-center
+             w-[100vw] h-[87vh] overflow-hidden relative ">
+                {images.map((img,index)=>{
+                   return( <img key={index} src={img} className={` absolute object-cover w-full h-full transition-opacity 
+                    duration-[3000ms] ease-in-out ${ index === currentImage ? "opacity-100 " : "opacity-0 z-[-1]" }`} />)
+                })}
+                {/*This Is Overlay Effect That Makes Image Liitle Dark */}
+                <div className="Overlay-Effect absolute inset-0 bg-black/40"></div> 
+                <div className="Search-Box shadow-lg backdrop-blur-sm flex z-10 ">
+                    <button className=" bg-[#FF7A00] p-[20px] pt-[15px] pb-[15px] rounded-tl-[20px] rounded-bl-[20px] ">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-white">
+                            <path fillRule="evenodd" d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25
+                            8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z" 
+                            clipRule="evenodd" />
+                        </svg>
+                    </button>
+                    <input className="w-[400px] rounded-tr-[20px] p-[20px] pt-[15px] pb-[15px] rounded-br-[20px] 
+                    outline-none text-[#666666] bg-[rgba(255,255,255,0.94)] border-[#FF7A00] border-[1px] " 
+                    type="text" 
+                    placeholder="Search places, tours..." />
+                </div>
+
+            </div>
+        </>
+    );
+
+}

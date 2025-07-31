@@ -4,14 +4,14 @@ export default function PopularTours()
         <>
         <div className="Popular-Tours h-[70vh] w-full flex-col bg-white p-[50px] ">
 
-
             <div className="Heading font-sans text-4xl font-bold">Popular Tours</div>
 
             {/* <!-- Area for multiple cards --> */}
             <div className="Tour-Cards-Area mt-8 flex h-full w-full flex-wrap gap-8">
 
                 {/* <!-- Card that is to be dispalyed --> */}
-                <div className="Card h-[300px] w-[280px] flex-col overflow-hidden rounded-3xl shadow-xl backdrop-blur-xl">
+                <div className="Card h-[300px] w-[280px] flex-col hover:scale-[103%] transition-transform ease-in-out duration-300
+                 overflow-hidden rounded-3xl shadow-xl backdrop-blur-xl">
 
                     {/* <!-- Container 1 --> */}
                     <div className="Card-Image">
@@ -39,7 +39,8 @@ export default function PopularTours()
 
                 
                 {/* <!-- Card that is to be dispalyed --> */}
-                <div className="Card h-[300px] w-[280px] flex-col overflow-hidden rounded-3xl shadow-xl backdrop-blur-xl">
+                <div className="Card h-[300px] w-[280px] flex-col hover:scale-[103%] transition-transform ease-in-out duration-300 
+                overflow-hidden rounded-3xl shadow-xl backdrop-blur-xl">
 
                     {/* <!-- Container 1 --> */}
                     <div className="Card-Image">

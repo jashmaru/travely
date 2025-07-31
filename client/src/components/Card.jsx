@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
     return(
         <>
         {/*<!-- Card that is to be dispalyed -->*/}
-        <div className="Card h-[300px] w-[280px] flex-col overflow-hidden rounded-3xl shadow-xl backdrop-blur-xl">
+        <div className="Card h-[300px] w-[280px] flex-col hover:scale-[103%] transition-transform ease-in-out duration-300
+         overflow-hidden rounded-3xl shadow-xl backdrop-blur-xl">
 
             {/*<!-- Container 1 -->*/}
             <div className="Card-Image">

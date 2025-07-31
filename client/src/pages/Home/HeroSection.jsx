@@ -28,7 +28,7 @@ export default function HeroSection()
     return(
         <>
             <div className="Hero-Section flex items-center justify-center
-             w-[100vw] h-[87vh] overflow-hidden relative ">
+             w-full h-[87vh] relative ">
                 {images.map((img,index)=>{
                    return( <img key={index} src={img} loading="lazy" className={` absolute object-cover w-full h-full transition-opacity 
                     duration-[3000ms] ease-in-out ${ index === currentImage ? "opacity-100 " : "opacity-0 z-[-1]" }`} />)
@@ -43,8 +43,8 @@ export default function HeroSection()
                             clipRule="evenodd" />
                         </svg>
                     </button>
-                    <input className="w-[400px] rounded-tr-[20px] p-[20px] pt-[15px] pb-[15px] rounded-br-[20px] 
-                    outline-none text-[#666666] bg-[rgba(255,255,255,0.94)] border-[#FF7A00] border-[1px] " 
+                    <input className="w-[400px]  rounded-tr-[20px] p-[20px] pt-[15px] pb-[15px] rounded-br-[20px] 
+                    outline-none text-[#666666] bg-[] border-[#FF7A00] border-[1px] " 
                     type="text" 
                     placeholder="Search places, tours..." />
                 </div>

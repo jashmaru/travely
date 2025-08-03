@@ -1,0 +1,28 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Server Side Of Travely Website",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jashmaru/travely.git"
+  },
+  "author": "Jash Maru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jashmaru/travely/issues"
+  },
+  "homepage": "https://github.com/jashmaru/travely#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "node": "^22.18.0",
+    "pg": "^8.16.3"
+  }
+}

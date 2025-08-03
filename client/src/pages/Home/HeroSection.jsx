@@ -34,7 +34,7 @@ export default function HeroSection()
                 })}
                 {/*This Is Overlay Effect That Makes Image Liitle Dark */}
                 <div className="Overlay-Effect absolute inset-0 bg-black/40"></div> 
-                <div className="Search-Box shadow-lg backdrop-blur-sm flex z-10 ">
+                <div className="Search-Box rounded-[20px] shadow-lg backdrop-blur-sm flex z-10 ">
                     <button className=" bg-[#FF7A00] p-[20px] pt-[15px] pb-[15px] rounded-tl-[20px] rounded-bl-[20px] ">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-4 lg:size-5 text-white">
                             <path fillRule="evenodd" d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25

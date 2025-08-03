@@ -33,13 +33,13 @@ export default function PopularTours()
 
     return(
         <>
-        <div className="Popular-Tours h-[70vh] w-full flex flex-col gap-6 bg-white p-[55px] lg:p-[50px] ">
+        <div className="Popular-Tours h-[70vh] w-full flex flex-col gap-8 bg-white p-[55px] lg:p-[50px] ">
 
             {/* Heading Of Section */}
-            <div className="Heading font-sans text-4xl mb-3 font-bold">Popular Tours</div>
+            <div className="Heading font-sans text-4xl ml-3 font-bold">Popular Tours</div>
 
             {/* <!-- Area for multiple cards --> */}
-            <div className="Tour-Cards-Area flex h-full w-full flex-wrap gap-8">
+            <div className="Tour-Cards-Area flex justify-center h-full w-full flex-wrap gap-8">
                 {popularTourData.map((tour,index)=>{
                     return(
                         <TripCard key={index} Name={tour.Name} ImgURL={tour.ImgURL} 

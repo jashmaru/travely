@@ -1,5 +1,5 @@
 import { Router } from "express";
-import getPopularTours from "../controllers/popularTours.controller";
+import getPopularTours from "../controllers/popularTours.controller.js";
 
 const router = Router();
 

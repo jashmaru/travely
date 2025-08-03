@@ -1,6 +1,6 @@
-import fetchPopularTours from "../models/popularTours.model";
+import fetchPopularTours from "../models/popularTours.model.js";
 
-export default async function getPopularTours()
+export default async function getPopularTours(req, res)
 {
     try {
         const tours = await fetchPopularTours();

@@ -1,35 +1,22 @@
+import { useState } from "react";
 import TripCard from "../../components/Card";
+import { useEffect } from "react";
 
 export default function PopularTours()
 {
-    const popularTourData = [{
-        Name : "Bali,Indonesia",
-        ImgURL : "https://plus.unsplash.com/premium_photo-1677829177642-30def98b0963?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        Duration: "8D | 7N",
-        Price : "$600",
-        Id : 1
-    },
-    {
-        Name : "Atlantis,Dubai",
-        ImgURL : "https://images.unsplash.com/photo-1634148551170-d37d021e0cc9?q=80&w=1184&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        Duration: "4D | 3N",
-        Price : "$500",
-        Id : 2
-    },
-    {
-        Name : "Danang, Vietnam",
-        ImgURL : "https://images.unsplash.com/photo-1555979864-7a8f9b4fddf8?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        Duration: "6D | 5N",
-        Price : "$500",
-        Id : 3
-    },
-    {
-        Name : "Tiger Nest, Bhutan",
-        ImgURL : "https://images.unsplash.com/photo-1578556881786-851d4b79cb73?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        Duration: "7D | 6N",
-        Price : "$400",
-        Id : 4
-    }];
+
+    const [tours, setTours] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(()=>{
+        fetch("http://localhost:3000/api/").then((res)=>res.json()).then((data)=>{ setTours(data); setLoading(false)})
+        .catch((error)=>{
+            console.log(error);
+            setLoading(false);
+        })
+    })
+
+    if (loading) return <p className="text-xl">Loading Popular Tours <span className="font-bold">...</span></p>
 
     return(
         <>
@@ -40,10 +27,10 @@ export default function PopularTours()
 
             {/* <!-- Area for multiple cards --> */}
             <div className="Tour-Cards-Area flex justify-center h-full w-full flex-wrap gap-8">
-                {popularTourData.map((tour,index)=>{
+                {tours.map((tour,index)=>{
                     return(
-                        <TripCard key={index} Name={tour.Name} ImgURL={tour.ImgURL} 
-                        Duration={tour.Duration} Price={tour.Price} Id={tour.Id} />
+                        <TripCard key={index} Name={tour.name} ImgURL={tour.imgurl} 
+                        Duration={tour.duration} Price={tour.price} Id={tour.id} />
                     )
                 })}
             </div>

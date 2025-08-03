@@ -34,16 +34,16 @@ export default function HeroSection()
                 })}
                 {/*This Is Overlay Effect That Makes Image Liitle Dark */}
                 <div className="Overlay-Effect absolute inset-0 bg-black/40"></div> 
-                <div className="Search-Box rounded-[20px] shadow-lg backdrop-blur-sm flex z-10 ">
-                    <button className=" bg-[#FF7A00] p-[20px] pt-[15px] pb-[15px] rounded-tl-[20px] rounded-bl-[20px] ">
+                <div className="Search-Box appearance-none rounded-[20px] shadow-lg backdrop-blur-sm flex z-10 overflow-hidden border-[#FF7A00] border-2 ">
+                    <button className=" bg-[#FF7A00] p-[20px] pt-[15px] pb-[15px]">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-4 lg:size-5 text-white">
                             <path fillRule="evenodd" d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25
                             8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z" 
                             clipRule="evenodd" />
                         </svg>
                     </button>
-                    <input className=" w-[250px] md:w-[400px] h-[50px] md:h[60px] rounded-tr-[20px] p-[20px] pt-[15px] pb-[15px] rounded-br-[20px] 
-                    outline-none text-[#666666] border-[#FF7A00] border-[1px] " 
+                    <input className=" w-[250px] md:w-[400px] h-[50px] md:h[60px] p-[20px] pt-[15px] pb-[15px]
+                    outline-none text-[#666666] " 
                     type="text" 
                     placeholder="Search places, tours..." />
                 </div>

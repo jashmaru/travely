@@ -42,7 +42,7 @@ export default function HeroSection()
                             clipRule="evenodd" />
                         </svg>
                     </button>
-                    <input className="appearance-none w-[250px] md:w-[400px] h-[50px] md:h[60px] p-[20px] pt-[15px] pb-[15px]
+                    <input className="appearance-none rounded-none w-[250px] md:w-[400px] h-[50px] md:h[60px] p-[20px] pt-[15px] pb-[15px]
                     outline-none text-[#666666] " 
                     type="text" 
                     placeholder="Search places, tours..." />

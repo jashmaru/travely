@@ -9,12 +9,12 @@ export default function PopularTours()
     const [loading, setLoading] = useState(true);
 
     useEffect(()=>{
-        fetch("http://localhost:3000/api/").then((res)=>res.json()).then((data)=>{ setTours(data); setLoading(false)})
+        fetch("http://localhost:3000/api").then((res)=>{console.log("Raw response:", res); return res.json();}).then((data)=>{console.log("data "+data); setTours(data); setLoading(false)})
         .catch((error)=>{
             console.log(error);
             setLoading(false);
         })
-    })
+    },[])
 
     if (loading) return <p className="text-xl">Loading Popular Tours <span className="font-bold">...</span></p>
 

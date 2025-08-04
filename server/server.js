@@ -1,21 +1,35 @@
-import express from "express";
 import dotenv from "dotenv";
-import cors from "cors";
-import popularTours from "./routes/popularTours.routes.js";
-
 dotenv.config();
+
+import express from "express";
+import cors from "cors";
+import router from "./routes/popularTours.routes.js";
+import pool from "./config/db.js";
 
 const app = express();
 const port = 3000;
 
-app.use(cors({
-    origin : "http://localhost:5173"
-}));
+app.use(cors());
+app.use(express.json());
 
 app.use(express.urlencoded({extended:true}));
 
-app.use("/api",popularTours)
-
+app.use("/api",router)
 app.listen(port,()=>{
     console.log("Server Running At localhost:"+port)
 })
+
+process.on("SIGINT", async () => {
+    console.log("\nReceived SIGINT. Initiating graceful shutdown...");
+    try {
+        app.close(() => {
+            console.log("HTTP server closed.");
+        });
+        await pool.end(); // Closes PostgreSQL pool
+        console.log("Database pool closed.");
+    } catch (err) {
+        console.error("Error during shutdown:", err);
+    } finally {
+        process.exit(0);
+    }
+});

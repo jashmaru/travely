@@ -5,6 +5,7 @@ import express from "express";
 import cors from "cors";
 import router from "./routes/popularTours.routes.js";
 import pool from "./config/db.js";
+import { Server } from "http";
 
 const app = express();
 const port = 3000;
@@ -15,14 +16,14 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
 app.use("/api",router)
-app.listen(port,()=>{
+const server = app.listen(port,()=>{
     console.log("Server Running At localhost:"+port)
 })
 
 process.on("SIGINT", async () => {
     console.log("\nReceived SIGINT. Initiating graceful shutdown...");
     try {
-        app.close(() => {
+        server.close(() => {
             console.log("HTTP server closed.");
         });
         await pool.end(); // Closes PostgreSQL pool

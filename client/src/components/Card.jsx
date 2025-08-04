@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
- export default function TripCard({Name,ImgURL,Duration,Price,Id})
+ export default function TripCard({Name,ImgURL,Duration,Price,Id,Type})
  {
     return(
         <>
@@ -24,7 +24,7 @@ import { Link } from "react-router-dom";
                 {/*<!-- Container 3 -->*/}
                 <div className="Tour-Price-CTA flex h-[70px] w-full justify-between">
                     <p className="font-bold text-orange-400">$ {Price}</p>
-                    <span><Link to={"/tours/"+Id}><button className="cursor-pointer rounded-lg bg-orange-500 pt-1 
+                    <span><Link to={"/"+Type+"/"+Id}><button className="cursor-pointer rounded-lg bg-orange-500 pt-1 
                     pr-2 pb-1 pl-2 text-white">Book Now</button></Link></span>
                 </div>
 

@@ -29,7 +29,7 @@ export default function PopularTours()
             <div className="Tour-Cards-Area flex justify-center h-full w-full flex-wrap gap-8">
                 {tours.map((tour,index)=>{
                     return(
-                        <TripCard key={index} Name={tour.name} ImgURL={tour.imgurl} 
+                        <TripCard key={index} Type={tour.type} Name={tour.name} ImgURL={tour.imgurl} 
                         Duration={tour.duration} Price={tour.price} Id={tour.id} />
                     )
                 })}

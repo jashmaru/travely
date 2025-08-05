@@ -1,11 +1,9 @@
-import dotenv from "dotenv";
-dotenv.config();
 
 import express from "express";
 import cors from "cors";
-import router from "./routes/popularTours.routes.js";
 import pool from "./config/db.js";
-import { Server } from "http";
+import router from "./routes/popularTours.routes.js";
+
 
 const app = express();
 const port = 3000;

@@ -1,4 +1,4 @@
-import fetchPopularTreks from "../models/popularTreks.model";
+import fetchPopularTreks from "../models/popularTreks.model.js";
 
 export default async function getPopularTreks(req, res)
 {

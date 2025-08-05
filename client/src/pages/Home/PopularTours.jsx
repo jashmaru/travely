@@ -9,7 +9,7 @@ export default function PopularTours()
     const [loading, setLoading] = useState(true);
 
     useEffect(()=>{
-        fetch("http://localhost:3000/api").then((res)=>{console.log("Raw response:", res); return res.json();}).then((data)=>{console.log("data "+data); setTours(data); setLoading(false)})
+        fetch("http://localhost:3000/api/popular-tours").then((res)=>{console.log("Raw response:", res); return res.json();}).then((data)=>{console.log("data "+data); setTours(data); setLoading(false)})
         .catch((error)=>{
             console.log(error);
             setLoading(false);
@@ -20,7 +20,7 @@ export default function PopularTours()
 
     return(
         <>
-        <div className="Popular-Tours h-[70vh] w-full flex flex-col gap-8 bg-white p-[55px] lg:p-[50px] ">
+        <div className="Popular-Tours min-h-[70vh] w-full flex flex-col gap-8 bg-white p-[55px] lg:p-[50px] ">
 
             {/* Heading Of Section */}
             <div className="Heading font-sans text-4xl ml-3 font-bold">Popular Tours</div>

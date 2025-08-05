@@ -1,5 +1,5 @@
 import { Router } from "express";
-import getPopularTreks from "../controllers/popularTreks.controller";
+import getPopularTreks from "../controllers/popularTreks.controller.js";
 
 const popularTreks = Router();
 

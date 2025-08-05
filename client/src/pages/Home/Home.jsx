@@ -1,5 +1,6 @@
 import HeroSection from "./HeroSection";
 import PopularTours from "./PopularTours";
+import PopularTreks from "./PopularTreks";
 
 export default function Home()
 {
@@ -7,7 +8,12 @@ export default function Home()
         <>
         <div className="HomePage">
             <HeroSection />
-            <PopularTours />
+            
+                <PopularTours />
+            
+            
+                <PopularTreks />
+            
         </div>
         </>
     )

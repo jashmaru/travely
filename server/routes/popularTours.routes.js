@@ -1,8 +1,8 @@
 import { Router } from "express";
 import getPopularTours from "../controllers/popularTours.controller.js";
 
-const router = Router();
+const popularTours = Router();
 
-router.get("/",getPopularTours);
+popularTours.get("/popular-tours",getPopularTours);
 
-export default router;
+export default popularTours;

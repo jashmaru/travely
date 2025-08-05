@@ -26,7 +26,8 @@ export default function PopularTours()
             <div className="Heading font-sans text-4xl ml-3 font-bold">Popular Tours</div>
 
             {/* <!-- Area for multiple cards --> */}
-            <div className="Tour-Cards-Area flex justify-center h-full w-full flex-wrap gap-8">
+            <div className="Tour-Cards-Area grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 
+            h-full w-full gap-8 ">
                 {tours.map((tour,index)=>{
                     return(
                         <TripCard key={index} Type={tour.type} Name={tour.name} ImgURL={tour.imgurl} 

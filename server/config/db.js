@@ -9,6 +9,5 @@ const pool = new Pool({
     password : process.env.DB_PASSWORD,
     port : Number(process.env.DB_PORT)
 });
-console.log("Password is:", process.env.DB_PASSWORD);
 
 export default pool;

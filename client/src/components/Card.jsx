@@ -34,3 +34,12 @@ import { Link } from "react-router-dom";
         </>
     )
  }
+
+ export function TestimonialCard({})
+ {
+    <>
+    <div className="Card flex flex-col">
+        <div className=""></div>
+    </div>
+    </>
+ }

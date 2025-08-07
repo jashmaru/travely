@@ -44,7 +44,7 @@ export default function TestimonialSection()
                         </svg>
                     </div>
 
-                    <div className="Testimonial-Card gap-4 w-full grid grid-cols-3 ">
+                    <div className="Testimonial-Card gap-4 w-full grid grid-cols-1 overflow-hidden md:grid-cols-2 lg:grid-cols-3 ">
                         {testimonialData.map((data,index)=>{
                             return <TestimonialCard key={index} Name={data.name} ImgURL={data.imgurl} Date={data.date} Review={data.review} 
                             Rating={data.rating} />

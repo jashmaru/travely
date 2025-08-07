@@ -9,11 +9,11 @@ export default function Header()
         <div className="Header flex font-manrope p-4 pr-6 lg:p-2 w-full h-[13vh] shadow-lg backdrop-blur-sm ">
             <div className="conatiner1 flex gap-2 items-center w-[50vw]">
                <Link to="/"><img className=" w-[70px] h-[70px] rounded-full " src={logo} /></Link>
-                <h1 className="font-bold text-[#111111]/90 text-[25px] ">Travely</h1>
+                <h1 className="font-bold text-[#111111]/90 text-[27px] font-sans ">Travely</h1>
             </div>
 
             <div className="container2 hidden lg:flex gap-6 items-center justify-end w-[50vw]">
-                    <ul className="NavLinks text-[#3e3e3e] flex gap-4 list-none font-manrope text-[17px] ">
+                    <ul className="NavLinks text-[#3e3e3e] flex gap-4 list-none font-manrope font-medium text-[17px] ">
                         <Link to="/" className=" hover:text-[#FFA040] " ><li>Home</li></Link>
                         <Link to="/tours" className=" hover:text-[#FFA040] "><li>Tours</li></Link>
                         <Link to="/treks" className=" hover:text-[#FFA040] "><li>Treks</li></Link>

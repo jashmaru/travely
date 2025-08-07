@@ -10,6 +10,7 @@ export default {
         manrope :['Manrope','sans-serif'],
         poppins :['Poppins','sans-serif'],
         playwrite :['Playwrite HU','cursive'],
+        pacifico :['Pacifico','cursive']
       }
     },
   },

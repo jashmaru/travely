@@ -50,7 +50,34 @@ export default function TestimonialSection()
         slidesToShow: 3,
         slidesToScroll: 1,
         nextArrow:<NextArrow />,
-        prevArrow : <PrevArrow />
+        prevArrow : <PrevArrow />,
+        responsive : 
+        [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    initialSlide: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     };
 
     if(loading) return <p className="text-lg">Loading Testimonials <span className="font-bold">...</span></p>
@@ -63,7 +90,7 @@ export default function TestimonialSection()
                 
                 <div className="Testimonial-Cards-Area flex flex-grow gap-8 items-center justify-between ">
                     <div className="Testimonial-Cards-Area w-full">
-                        <Slider {...settings}>
+                        <Slider className="slicker-dots" {...settings}>
                             {testimonial.map((data,index)=>{
                                 return<div className="px-4 pb-4"><TestimonialCard key={index} Name={data.name} Date={data.date} Review={data.review} Rating={data.rating} 
                                 ImgURL={data.imgurl} /></div>

@@ -5,15 +5,17 @@ export default function Footer()
 {
     return(
         <>
-        <div className="Footer text-white flex w-full flex-col lg:flex-row min-h-[50vh] p-[40px] bg-[#FF7A00]">
-            <div className="flex gap-[50px] items-center border-r-white border-r pl-[40px] pr-[80px]">
+        <div className="Footer text-white flex flex-wrap w-full flex-col lg:flex-row min-h-[50vh] p-[40px] bg-[#FF7A00]">
+            <div className="flex gap-[50px] items-center justify-center border-white border-b lg:border-b-0 lg:border-r
+            pb-[50px] lg:pl-[40px] lg:pr-[80px]">
                 <div className="Logo text-[50px] -rotate-12 font-pacifico">Travely</div>
             </div>
             
-            <div className="Navigation-Links tracking-[1px] pt-[60px] font-sans font-thin pl-[100px] pr-[150px] gap-[100px] flex ">
+            <div className="Navigation-Links tracking-[1px] pt-[60px] font-sans font-thin text-sm md:text-normal 
+             lg:pl-[100px] lg:pr-[150px] gap-[40px] lg:gap-[100px] flex md:justify-center">
 
                 <div className="Box-1 gap-0.5 flex flex-col ">
-                    <div className="Heading font-bold text-lg mb-2 ">Quick Links</div>
+                    <div className="Heading font-bold text-md lg:text-lg mb-2 ">Quick Links</div>
                     <a href="http://localhost:5173/">Home</a>
                     <a href="http://localhost:5173/tours">Tours</a>
                     <a href="http://localhost:5173/treks">Treks</a>
@@ -22,7 +24,7 @@ export default function Footer()
                 </div>
 
                 <div className="Box-2 gap-0.5 flex flex-col">
-                    <div className="Heading font-bold text-lg -mt-0.5 mb-2 ">Important Links</div>
+                    <div className="Heading font-bold text-md lg:text-lg lg:-mt-0.5 mb-2 ">Important Links</div>
                     <a href="">Privacy Policy</a>
                     <a href="">Cancellation Policy</a>
                     <a href="">Terms & Conditions</a>
@@ -30,7 +32,7 @@ export default function Footer()
                 </div>
 
                 <div className="Box-3 gap-0.5 flex flex-col">
-                    <div className="Heading font-bold text-lg -mt-0.5 mb-2 ">Company</div>
+                    <div className="Heading font-bold text-lg lg:text-lg lg:-mt-0.5 mb-2 ">Company</div>
                     <a href="">Carrers</a>
                     <a href="">Blogs</a>
                     <a href="">Teams</a>
@@ -40,7 +42,7 @@ export default function Footer()
 
             <div className="Subscribe-Newsletter flex flex-col gap-4 pt-[75px]">
                 <div className="Subscribe-Area flex gap-2 items-center flex-col ">
-                    <div className="font-bold font-manrope uppercase tracking-[1.5px] ">Subscribe To Our News Letter</div>
+                    <div className="font-bold text-sm md:text-lg font-manrope uppercase tracking-[1.5px] ">Subscribe To Our News Letter</div>
                     <input placeholder="Enter Your Email" className="rounded-lg text-[#3e3e3e] p-[5px] pl-[15px] w-[310px] 
                     outline-none "/>
                 </div>

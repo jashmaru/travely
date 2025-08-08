@@ -3,14 +3,20 @@ import { TestimonialCard } from "../../components/Card";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import {ChevronLeft,ChevronRight} from "lucide-react"
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function TestimonialSection()
 {
+    const [testimonial, setTestimonial] = useState([]);
+    const [loading, setLoading] = useState(true);
 
-    useEffect(
-        fetch("")
-    );
+    useEffect(()=>{
+        fetch("http://localhost:3000/api/testimonials").then((res)=>{ return res.json()}).then((data)=>{ setTestimonial(data); setLoading(false); })
+        .catch((error)=>{
+            console.log(error);
+            setLoading(false);
+        })
+    },[]);
 
     function NextArrow(props) {
         const { onClick } = props;
@@ -45,6 +51,8 @@ export default function TestimonialSection()
         prevArrow : <PrevArrow />
     };
 
+    if(loading) return <p className="text-lg">Loading Testimonials <span className="font-bold">...</span></p>
+
     return(
         <>
             <div className="Testimonial-Section flex flex-col w-full gap-8 min-h-[70vh] p-[50px] lg:p-[55px]  ">
@@ -54,7 +62,7 @@ export default function TestimonialSection()
                 <div className="Testimonial-Cards-Area flex flex-grow gap-8 items-center justify-between ">
                     <div className="Testimonial-Cards-Area w-full">
                         <Slider {...settings}>
-                            {testimonialData.map((data,index)=>{
+                            {testimonial.map((data,index)=>{
                                 return<div className="px-4 pb-4"><TestimonialCard key={index} Name={data.name} Date={data.date} Review={data.review} Rating={data.rating} 
                                 ImgURL={data.imgurl} /></div>
                             })}

@@ -43,8 +43,11 @@ export default function Footer()
             <div className="Subscribe-Newsletter flex flex-col gap-4 pt-[75px]">
                 <div className="Subscribe-Area flex gap-2 items-center flex-col ">
                     <div className="font-bold text-sm md:text-lg font-manrope uppercase tracking-[1.5px] ">Subscribe To Our News Letter</div>
-                    <input placeholder="Enter Your Email" className="rounded-lg text-[#3e3e3e] p-[5px] pl-[15px] w-[310px] 
-                    outline-none "/>
+                    <div className="flex rounded-lg overflow-hidden">
+                        <input placeholder="Enter Your Email" className="text-[#3e3e3e] p-[5px] pl-[15px] w-[270px] 
+                        outline-none "/>
+                        <button className="p-[10px] border-white border-2 rounded-tr-lg  rounded-br-lg">Submit</button>
+                    </div>
                 </div>
                 <div className="Social-Media flex justify-center gap-4 ">
                     <Youtube />

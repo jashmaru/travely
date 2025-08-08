@@ -1,8 +1,11 @@
+import Slider from "react-slick";
 import { TestimonialCard } from "../../components/Card";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import {ChevronLeft,ChevronRight} from "lucide-react"
 
 export default function TestimonialSection()
 {
-
 
     const testimonialData = [
         {
@@ -25,9 +28,76 @@ export default function TestimonialSection()
             rating : "⭐⭐⭐⭐⭐",
             review : "Absolutely flawless from start to finish. The accommodations were top-notch, and the sunset views were breathtaking.",
             date : "August 10, 2025"
+        },
+        {
+            name : "Lina",
+            imgurl : "https://randomuser.me/api/portraits/women/68.jpg",
+            rating : "⭐⭐⭐⭐⭐",
+            review : "I fell in love with the culture, the food, and the warm hospitality. The team ensured we were comfortable and happy throughout.",
+            date : "July 5, 2025"
+        },
+        {
+            name : "Daniel",
+            imgurl : "https://randomuser.me/api/portraits/men/75.jpg",
+            rating : "⭐⭐⭐",
+            review : "Good experience overall, though some parts of the itinerary felt too commercialized. Still, the natural beauty was amazing.",
+            date : "June 28, 2025"
+        },
+        {
+            name : "Sofia",
+            imgurl : "https://randomuser.me/api/portraits/women/22.jpg",
+            rating : "⭐⭐⭐⭐⭐",
+            review : "The team went above and beyond! Each day brought a new adventure, and I couldn’t have asked for a better birthday trip.",
+            date : "August 1, 2025"
+        },
+        {
+            name : "Anil",
+            imgurl : "https://randomuser.me/api/portraits/men/45.jpg",
+            rating : "⭐⭐⭐⭐",
+            review : "Loved the flexibility of the tour. We were able to explore on our own while still enjoying guided experiences.",
+            date : "May 19, 2025"
+        },
+        {
+            name : "Priya",
+            imgurl : "https://randomuser.me/api/portraits/women/36.jpg",
+            rating : "⭐⭐⭐⭐⭐",
+            review : "An unforgettable escape! Bali's charm combined with the smooth arrangements made this one of our best trips yet.",
+            date : "April 7, 2025"
         }
     ];
 
+    function NextArrow(props) {
+        const { onClick } = props;
+        return (
+            <button
+            onClick={onClick}
+            className="absolute top-1/2 translate-x-7 -translate-y-2  right-0 "
+            >
+            <ChevronRight className="w-7 h-7 text-gray-800" />
+            </button>
+        );
+    }
+
+    function PrevArrow(props) {
+        const { onClick } = props;
+        return (
+            <button
+            onClick={onClick}
+            className="absolute top-1/2 -translate-x-6 -translate-y-2"        
+            >
+                <ChevronLeft className="w-7 h-7 text-gray-800" />
+            </button>
+        );
+    }
+
+    const settings = {
+        dots: true,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        nextArrow:<NextArrow />,
+        prevArrow : <PrevArrow />
+    };
 
     return(
         <>
@@ -36,27 +106,14 @@ export default function TestimonialSection()
                 <div className="Heading font-bold text-4xl font-sans ">Testimonial Section</div>
                 
                 <div className="Testimonial-Cards-Area flex flex-grow gap-8 items-center justify-between ">
-
-                    <div className="Left Arrow hover:cursor-pointer ">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} 
-                        stroke="currentColor" className="size-6">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-                        </svg>
+                    <div className="Testimonial-Cards-Area w-full">
+                        <Slider {...settings}>
+                            {testimonialData.map((data,index)=>{
+                                return<div className="px-4 pb-4"><TestimonialCard key={index} Name={data.name} Date={data.date} Review={data.review} Rating={data.rating} 
+                                ImgURL={data.imgurl} /></div>
+                            })}
+                        </Slider>
                     </div>
-
-                    <div className="Testimonial-Card gap-4 w-full grid grid-cols-1 overflow-hidden md:grid-cols-2 lg:grid-cols-3 ">
-                        {testimonialData.map((data,index)=>{
-                            return <TestimonialCard key={index} Name={data.name} ImgURL={data.imgurl} Date={data.date} Review={data.review} 
-                            Rating={data.rating} />
-                        })}
-                    </div>
-                     
-                    <div className="Right Arrow hover:cursor-pointer">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-                        </svg>
-                    </div>
-
                 </div>
             
             </div>

@@ -39,7 +39,7 @@ import { Link } from "react-router-dom";
  {
     return(
             <>
-            <div className="Card p-[5px] border relative flex h-[260px] flex-col overflow-hidden rounded-lg">
+            <div className={"Card p-[5px] border relative flex h-[260px] flex-col overflow-hidden rounded-lg "}>
                 <div className="Person-Details text-gray-900 flex h-[90px] items-center p-[15px] pb-0">
                     <img src={ImgURL} 
                     className="h-[60px] w-[60px] rounded-[200px] object-cover" />
@@ -54,5 +54,5 @@ import { Link } from "react-router-dom";
                 </div>
             </div>
             </>
-    )
+    );
  }

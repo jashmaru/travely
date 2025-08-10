@@ -6,7 +6,7 @@ export default function Header()
     return(
         <>
         <header>
-        <div className="Header flex font-manrope p-4 pr-6 lg:p-2 w-full h-[13vh] shadow-lg backdrop-blur-sm ">
+        <div className="Header flex font-manrope p-4 pr-6 lg:p-2 w-full h-[13vh] shadow-md backdrop-blur-sm ">
             <div className="conatiner1 flex gap-2 items-center w-[50vw]">
                <Link to="/"><img className=" w-[70px] h-[70px] rounded-full " src={logo} /></Link>
                 <h1 className="font-bold text-[#111111]/90 text-[27px] font-sans ">Travely</h1>

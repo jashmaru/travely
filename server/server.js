@@ -1,11 +1,10 @@
-
 import express from "express";
 import cors from "cors";
 import pool from "./config/db.js";
 import popularTours from "./routes/popularTours.routes.js";
 import popularTreks from "./routes/popularTreks.routes.js";
 import testimonials from "./routes/testimonials.routes.js";
-
+import search from "./routes/search.routes.js";
 
 const app = express();
 const port = 3000;
@@ -18,6 +17,7 @@ app.use(express.urlencoded({extended:true}));
 app.use("/api",popularTours);
 app.use("/api",popularTreks);
 app.use("/api",testimonials);
+app.use("/api",search);
 
 const server = app.listen(port,()=>{
     console.log("Server Running At localhost:"+port)

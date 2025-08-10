@@ -1,5 +1,5 @@
 import { Facebook,Instagram,Github,Twitter,Youtube,Linkedin } from "lucide-react";
-
+import { Link } from "react-router-dom";
  
 export default function Footer()
 {
@@ -16,11 +16,11 @@ export default function Footer()
 
                 <div className="Box-1 gap-0.5 flex flex-col ">
                     <div className="Heading font-bold text-md lg:text-lg mb-2 ">Quick Links</div>
-                    <a href="http://localhost:5173/">Home</a>
-                    <a href="http://localhost:5173/tours">Tours</a>
-                    <a href="http://localhost:5173/treks">Treks</a>
-                    <a href="http://localhost:5173/about">About</a>
-                    <a href="http://localhost:5173/contact">Contact</a>
+                    <Link to="http://localhost:5173/">Home</Link>
+                    <Link to="http://localhost:5173/tours">Tours</Link>
+                    <Link to="http://localhost:5173/treks">Treks</Link>
+                    <Link to="http://localhost:5173/about">About</Link>
+                    <Link to="http://localhost:5173/contact">Contact</Link>
                 </div>
 
                 <div className="Box-2 gap-0.5 flex flex-col">

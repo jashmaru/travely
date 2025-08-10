@@ -30,7 +30,7 @@ export default function Tours()
 
     return(
         <>
-        <div className="Tours-Page flex flex-col gap-[40px] p-[60px] pt-[50px] ">
+        <div className="Tours-Page flex flex-col gap-[40px] p-[60px] pt-[50px]">
             <div className="Heading font-bold font-sans text-[30px]">
                 {heading},  
             </div>

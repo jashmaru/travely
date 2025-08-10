@@ -29,9 +29,12 @@ export default function HeroSection()
         
     },[])
 
-    function linkPage()
+    function linkPage(event)
     {
-        return searchText.trim() !== "" ? navigate(`/search?text=${encodeURIComponent(searchText)}`) : null
+        if(event.type === "click" || event.type === "keydown" && event.key ==="Enter")
+        {
+            return searchText.trim() !== "" ? navigate(`/search?text=${encodeURIComponent(searchText)}`) : null
+        }
     }
 
     return(
@@ -51,6 +54,7 @@ export default function HeroSection()
                     outline-none text-black " 
                     type="text" 
                     value={searchText}
+                    onKeyDown={linkPage}
                     onChange={(inputText)=>{return(setSearchText(inputText.target.value));}}
                     placeholder="Search places, tours..." />
                 </div>

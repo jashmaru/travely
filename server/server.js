@@ -5,6 +5,7 @@ import popularTours from "./routes/popularTours.routes.js";
 import popularTreks from "./routes/popularTreks.routes.js";
 import testimonials from "./routes/testimonials.routes.js";
 import search from "./routes/search.routes.js";
+import tours from "./routes/tours.routes.js";
 
 const app = express();
 const port = 3000;
@@ -18,6 +19,7 @@ app.use("/api",popularTours);
 app.use("/api",popularTreks);
 app.use("/api",testimonials);
 app.use("/api",search);
+app.use("/api",tours);
 
 const server = app.listen(port,()=>{
     console.log("Server Running At localhost:"+port)

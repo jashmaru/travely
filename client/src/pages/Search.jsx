@@ -24,7 +24,7 @@ export default function Search()
 
     return(
         <>
-        <div className="Search-Results flex flex-col p-[60px] gap-[40px] ">
+        <div className="Search-Results flex flex-col p-[60px] pt-[50px] gap-[40px] ">
             <div className="Heading font-bold font-sans text-[30px] ">
                 Searched Results For {searchText},
             </div>

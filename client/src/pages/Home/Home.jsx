@@ -9,9 +9,11 @@ export default function Home()
         <>
         <div className="HomePage">
             <HeroSection />
-            <PopularTours />
-            <PopularTreks />
-            <TestimonialSection />
+            <div className="Content bg-gray-50">
+                <PopularTours />
+                <PopularTreks />
+                <TestimonialSection />
+            </div>
         </div>
         </>
     )

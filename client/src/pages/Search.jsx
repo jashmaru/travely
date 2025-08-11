@@ -8,7 +8,7 @@ export default function Search()
     const [loading, setLoading] = useState(true);
 
     const searchValue = new URLSearchParams(useLocation().search);
-    const searchText = searchValue.get("text");
+    const searchText = searchValue.get("text").trim();
 
     useEffect(()=>{
         fetch(`http://localhost:3000/api/search?text=${encodeURIComponent(searchText)}`)
@@ -18,14 +18,14 @@ export default function Search()
 
     if(loading) return <></>
 
-    if (search.length===0) return <><div className="Heading font-bold font-sans text-[30px] flex justify-center h-[37vh] items-center ">
-                No Matching Result For {searchText},
+    if (search.length===0) return <><div className="Heading font-bold capitalize font-sans text-[30px] flex justify-center h-[37vh] items-center ">
+                No Matching Result For {searchText}
             </div></>
 
     return(
         <>
         <div className="Search-Results flex flex-col p-[60px] pt-[50px] gap-[40px] ">
-            <div className="Heading font-bold font-sans text-[30px] ">
+            <div className="Heading capitalize font-bold font-sans text-[30px] ">
                 Searched Results For {searchText},
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 ">   

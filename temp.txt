@@ -1,62 +1,375 @@
-{/* <!-- Card that is to be dispalyed --> */}
-                <div className="Card h-[300px] w-[280px] flex-col hover:scale-[103%] transition-transform ease-in-out duration-300
-                 overflow-hidden rounded-3xl shadow-xl backdrop-blur-xl">
+code for package.jsx UI
 
-                    {/* <!-- Container 1 --> */}
-                    <div className="Card-Image">
-                        <img className="h-[160px] w-full object-cover" 
-                        src="https://plus.unsplash.com/premium_photo-1677829177642-30def98b0963?q=80&w=1170&
-                        auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-                    </div>
+<div class="min-h-screen bg-gray-50 font-sans">
+  <!-- Hero -->
+  <div class="relative h-[420px] w-full">
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" class="h-full w-full object-cover" alt="Tour" />
+    <div class="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-t from-black/70 via-black/30 to-transparent px-4 text-center text-white">
+      <h1 class="text-5xl font-bold">Bali Adventure Tour</h1>
+      <p class="mt-2 text-lg opacity-90">7 Days / 6 Nights • Bali, Indonesia</p>
+      <div class="mt-5 flex items-center gap-3">
+        <span class="rounded bg-orange-500 px-4 py-2 text-xl font-semibold">$999</span>
+        <button class="rounded bg-white px-5 py-2 font-semibold text-orange-500 transition hover:bg-gray-100">Book Now</button>
+      </div>
+      <p class="mt-3 text-sm opacity-80">Limited slots — Early booking recommended!</p>
+    </div>
+  </div>
 
-                    <div className="Tour-Details bg-white p-4">
-                        {/* <!-- Container 2 --> */}
-                        <div className="Tour-Name-Time h-[70px] w-full">
-                        <h1 className="text-lg font-bold">Bali,Indonesia</h1>
-                        <p className="text-sm text-gray-700">8D | 7N</p>
-                        </div>
+  <!-- Main Content -->
+  <div class="mx-auto grid max-w-7xl grid-cols-1 gap-8 p-6 lg:grid-cols-3">
+    <!-- Left Column -->
+    <div class="space-y-8 lg:col-span-2">
+      <!-- Overview -->
+      <section class="rounded-xl bg-white p-6 shadow">
+        <h2 class="mb-4 text-2xl font-bold text-orange-500">Tour Overview</h2>
+        <p class="text-gray-700">Discover the magic of Bali with our 7-day adventure. Experience stunning beaches, vibrant culture, and thrilling activities, all while staying at handpicked hotels.</p>
+      </section>
 
-                        {/* <!-- Container 3 --> */}
-                        <div className="Tour-Price-CTA flex h-[70px] w-full justify-between">
-                            <p className="font-bold text-orange-400">$800</p>
-                            <span><button className="cursor-pointer rounded-lg bg-orange-500 pt-1 
-                            pr-2 pb-1 pl-2 text-white">Book Now</button></span>
-                        </div>
-                    </div>
+      <!-- Join Us From -->
+      <section class="rounded-xl bg-white p-6 shadow">
+        <h2 class="mb-4 text-2xl font-bold text-orange-500">Join Us From</h2>
+        <ul class="list-inside list-disc space-y-1 text-gray-700">
+          <li>Denpasar Airport (Ngurah Rai International Airport)</li>
+          <li>Kuta City Center</li>
+          <li>Seminyak Beachfront Area</li>
+          <li>Ubud Central Pickup Point</li>
+          <li>Sanur Harbour</li>
+        </ul>
+        <p class="mt-4 text-sm text-gray-500">Please arrive at your chosen pickup location at least 30 minutes before departure time.</p>
+      </section>
 
-                </div>
-
-                
-                {/* <!-- Card that is to be dispalyed --> */}
-                <div className="Card h-[300px] w-[280px] flex-col hover:scale-[103%] transition-transform ease-in-out duration-300 
-                overflow-hidden rounded-3xl shadow-xl backdrop-blur-xl">
-
-                    {/* <!-- Container 1 --> */}
-                    <div className="Card-Image">
-                        <img className="h-[160px] w-full object-cover" 
-                        src="https://images.unsplash.com/photo-1634148551170-d37d021e0cc9?q=80&w=1184&auto=format&
-                        fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-                    </div>
-
-                    <div className="Tour-Details bg-white p-4">
-                        {/* <!-- Container 2 --> */}
-                        <div className="Tour-Name-Time h-[70px] w-full">
-                        <h1 className="text-lg font-bold">Atlantis,Dubai</h1>
-                        <p className="text-sm text-gray-700">4D | 3N</p>
-                        </div>
-
-                        {/* <!-- Container 3 --> */}
-                        <div className="Tour-Price-CTA flex h-[70px] w-full justify-between">
-                            <p className="font-bold text-orange-400">$1000</p>
-                            <span><button className="cursor-pointer rounded-lg bg-orange-500 pt-1 
-                            pr-2 pb-1 pl-2 text-white">Book Now</button></span>
-                        </div>
-                    </div>
-
-                </div>
-                
-            </div>
+      <!-- Includes -->
+      <section class="rounded-xl bg-white p-6 shadow">
+        <h2 class="mb-6 text-2xl font-bold text-orange-500">Includes</h2>
+        <div class="grid grid-cols-2 gap-6 text-center sm:grid-cols-5">
+          <div>
+            <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-orange-50 text-2xl text-orange-500">🍽</div>
+            <p class="mt-2 text-gray-700">Meals</p>
+          </div>
+          <div>
+            <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-orange-50 text-2xl text-orange-500">🏨</div>
+            <p class="mt-2 text-gray-700">Stay</p>
+          </div>
+          <div>
+            <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-orange-50 text-2xl text-orange-500">🚌</div>
+            <p class="mt-2 text-gray-700">Transfers</p>
+          </div>
+          <div>
+            <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-orange-50 text-2xl text-orange-500">🎟</div>
+            <p class="mt-2 text-gray-700">Tickets</p>
+          </div>
+          <div>
+            <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-orange-50 text-2xl text-orange-500">🏝</div>
+            <p class="mt-2 text-gray-700">Activities</p>
+          </div>
         </div>
+      </section>
+
+      <!-- Itinerary -->
+      <section class="rounded-xl bg-white p-6 shadow">
+        <h2 class="mb-4 text-2xl font-bold text-orange-500">Itinerary</h2>
+        <div class="space-y-4">
+          <div>
+            <p class="font-semibold text-orange-500">Day 1</p>
+            <p>Arrival & Beach Welcome Dinner</p>
+          </div>
+          <div>
+            <p class="font-semibold text-orange-500">Day 2</p>
+            <p>Temple Tour & Cultural Show</p>
+          </div>
+          <div>
+            <p class="font-semibold text-orange-500">Day 3</p>
+            <p>Water Sports & Island Hopping</p>
+          </div>
+          <p class="cursor-pointer text-orange-500 hover:underline">+ View Full Itinerary</p>
+        </div>
+      </section>
+
+      <!-- Popular Tours -->
+      <section class="rounded-xl bg-white p-6 shadow">
+        <h2 class="mb-4 text-2xl font-bold text-orange-500">Popular Tours</h2>
+        <div class="grid gap-4 sm:grid-cols-3">
+          <div class="flex h-32 items-center justify-center rounded bg-orange-50">Tour 1</div>
+          <div class="flex h-32 items-center justify-center rounded bg-orange-50">Tour 2</div>
+          <div class="flex h-32 items-center justify-center rounded bg-orange-50">Tour 3</div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Right Column -->
+    <div class="space-y-8">
+      <!-- Inquiry Form -->
+      <div class="rounded-xl bg-white p-6 shadow">
+        <h3 class="mb-4 text-xl font-bold text-orange-500">Send Inquiry</h3>
+        <form class="space-y-3">
+          <input type="text" placeholder="Your Name" class="w-full rounded border border-gray-300 px-3 py-2" />
+          <input type="email" placeholder="Your Email" class="w-full rounded border border-gray-300 px-3 py-2" />
+          <textarea placeholder="Your Message" class="h-24 w-full rounded border border-gray-300 px-3 py-2"></textarea>
+          <button type="submit" class="w-full rounded bg-orange-500 px-4 py-2 text-white transition hover:bg-orange-600">Submit Inquiry</button>
+        </form>
+      </div>
+
+      <!-- Contact Us -->
+      <div class="rounded-xl bg-white p-6 text-center shadow">
+        <h3 class="mb-4 text-xl font-bold text-orange-500">Have Questions?</h3>
+        <p class="mb-4 text-gray-700">We’re here to assist you with bookings and custom trips.</p>
+        <a href="/contact" class="inline-block rounded bg-orange-500 px-6 py-3 text-white transition hover:bg-orange-600"> Contact Us </a>
+      </div>
+    </div>
+  </div>
+</div>
 
 
-        https://images.unsplash.com/photo-1555979864-7a8f9b4fddf8?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+code for contact page UI
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | Travely</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800">
+
+  <!-- Hero Section -->
+  <section class="relative bg-cover bg-center h-64" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');">
+    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+      <h1 class="text-white text-4xl md:text-5xl font-bold">Contact Us</h1>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="max-w-7xl mx-auto py-12 px-4 md:px-8 grid md:grid-cols-2 gap-8">
+    
+    <!-- Contact Form -->
+    <div class="bg-white p-6 shadow-lg rounded-lg">
+      <h2 class="text-2xl font-bold mb-6 text-orange-500">Send us a Message</h2>
+      <form action="#" method="POST" class="space-y-4">
+        <div>
+          <label class="block text-sm font-medium">Full Name</label>
+          <input type="text" class="mt-1 block w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-orange-400" placeholder="Your Name" required>
+        </div>
+        <div>
+          <label class="block text-sm font-medium">Email Address</label>
+          <input type="email" class="mt-1 block w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-orange-400" placeholder="you@example.com" required>
+        </div>
+        <div>
+          <label class="block text-sm font-medium">Subject</label>
+          <input type="text" class="mt-1 block w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-orange-400" placeholder="Message Subject" required>
+        </div>
+        <div>
+          <label class="block text-sm font-medium">Message</label>
+          <textarea rows="5" class="mt-1 block w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-orange-400" placeholder="Your message..." required></textarea>
+        </div>
+        <button type="submit" class="w-full bg-orange-500 text-white py-2 px-4 rounded-lg hover:bg-orange-600 transition">Send Message</button>
+      </form>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="bg-white p-6 shadow-lg rounded-lg">
+      <h2 class="text-2xl font-bold mb-6 text-orange-500">Get in Touch</h2>
+      <p class="mb-4">We’d love to hear from you. Whether you have a question about our tours, pricing, or anything else, our team is ready to answer all your questions.</p>
+      
+      <div class="space-y-3">
+        <div>
+          <h3 class="font-semibold">📍 Address</h3>
+          <p>123 Adventure Street, Bali, Indonesia</p>
+        </div>
+        <div>
+          <h3 class="font-semibold">📞 Phone</h3>
+          <p>+62 123 456 789</p>
+        </div>
+        <div>
+          <h3 class="font-semibold">✉️ Email</h3>
+          <p>support@travely.com</p>
+        </div>
+      </div>
+
+      <!-- Map Preview -->
+      <div class="mt-6">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.183902449931!2d115.18891561478186!3d-8.409517093964057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd240ecfe2f2e1b%3A0xe7504e9e6b01d3b0!2sBali!5e0!3m2!1sen!2sid!4v1615567954350!5m2!1sen!2sid" 
+          width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
+
+code for about us page UI
+
+<div class="font-sans bg-white text-gray-800">
+
+  <!-- Hero -->
+  <section class="relative h-72">
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" class="w-full h-full object-cover" alt="Travel background">
+    <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white">
+      <h1 class="text-4xl font-bold">About Travely</h1>
+      <p class="mt-2 text-lg">Your trusted partner for unforgettable adventures</p>
+    </div>
+  </section>
+
+  <!-- Who We Are -->
+  <section class="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-8 items-center">
+    <div>
+      <h2 class="text-3xl font-bold mb-4">Who We Are</h2>
+      <p class="mb-4">
+        At Travely, we create journeys that blend culture, adventure, and relaxation. With years of expertise, we bring you
+        hand-picked destinations, top-class guides, and tailored itineraries.
+      </p>
+      <a href="/contact" class="inline-block bg-orange-500 hover:bg-orange-600 text-white px-5 py-2 rounded">Learn More</a>
+    </div>
+    <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1" class="rounded-lg shadow-lg" alt="Who we are">
+  </section>
+
+  <!-- Mission & Vision -->
+  <section class="bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8">
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h3 class="text-xl font-bold mb-2">Our Mission</h3>
+        <p>To connect travelers with authentic experiences that inspire and enrich their lives.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h3 class="text-xl font-bold mb-2">Our Vision</h3>
+        <p>To be the most trusted travel companion for exploring the world’s beauty responsibly.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Travel With Us -->
+  <section class="py-16 max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-10">Why Travel With Us</h2>
+    <div class="grid md:grid-cols-4 gap-6">
+      <div class="p-6 bg-white rounded-lg shadow text-center">
+        <div class="text-3xl mb-3">🌍</div>
+        <h4 class="font-semibold mb-2">Handpicked Destinations</h4>
+        <p>Only the best locations, curated for you.</p>
+      </div>
+      <div class="p-6 bg-white rounded-lg shadow text-center">
+        <div class="text-3xl mb-3">🧑‍🏫</div>
+        <h4 class="font-semibold mb-2">Expert Guides</h4>
+        <p>Friendly and knowledgeable local guides.</p>
+      </div>
+      <div class="p-6 bg-white rounded-lg shadow text-center">
+        <div class="text-3xl mb-3">🏨</div>
+        <h4 class="font-semibold mb-2">Comfortable Stays</h4>
+        <p>Carefully selected hotels and lodges.</p>
+      </div>
+      <div class="p-6 bg-white rounded-lg shadow text-center">
+        <div class="text-3xl mb-3">📅</div>
+        <h4 class="font-semibold mb-2">Flexible Itineraries</h4>
+        <p>Trips tailored to your preferences.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Meet the Team -->
+  <section class="bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-10">Meet Our Team</h2>
+      <div class="grid md:grid-cols-4 gap-8 text-center">
+        <div>
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-24 h-24 rounded-full mx-auto mb-3">
+          <h4 class="font-semibold">John Doe</h4>
+          <p class="text-gray-500 text-sm">Founder</p>
+        </div>
+        <div>
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-24 h-24 rounded-full mx-auto mb-3">
+          <h4 class="font-semibold">Sarah Smith</h4>
+          <p class="text-gray-500 text-sm">Travel Expert</p>
+        </div>
+        <div>
+          <img src="https://randomuser.me/api/portraits/men/54.jpg" class="w-24 h-24 rounded-full mx-auto mb-3">
+          <h4 class="font-semibold">Michael Lee</h4>
+          <p class="text-gray-500 text-sm">Tour Coordinator</p>
+        </div>
+        <div>
+          <img src="https://randomuser.me/api/portraits/women/68.jpg" class="w-24 h-24 rounded-full mx-auto mb-3">
+          <h4 class="font-semibold">Emma Davis</h4>
+          <p class="text-gray-500 text-sm">Customer Support</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Explore Packages -->
+  <section class="py-16 max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-10">Explore Our Packages</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-white rounded-lg shadow overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" class="w-full h-40 object-cover">
+        <div class="p-4">
+          <h4 class="font-semibold mb-2">Bali Adventure</h4>
+          <p class="text-sm text-gray-600">7 Days • Starting from $999</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" class="w-full h-40 object-cover">
+        <div class="p-4">
+          <h4 class="font-semibold mb-2">Swiss Alps Tour</h4>
+          <p class="text-sm text-gray-600">5 Days • Starting from $1299</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1493558103817-58b2924bce98" class="w-full h-40 object-cover">
+        <div class="p-4">
+          <h4 class="font-semibold mb-2">Safari Adventure</h4>
+          <p class="text-sm text-gray-600">8 Days • Starting from $1499</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="bg-orange-500 text-white py-12">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">Ready to Plan Your Next Adventure?</h2>
+      <a href="/packages" class="bg-white text-orange-600 px-6 py-2 rounded font-semibold hover:bg-gray-100">Book Now</a>
+    </div>
+  </section>
+
+</div>
+
+code for login page ui 
+
+<div class="min-h-screen flex">
+  <!-- Left side with image and quote -->
+  <div class="hidden lg:flex lg:w-1/2 relative">
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" 
+         class="w-full h-full object-cover" alt="Beach Sunset">
+    <div class="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent"></div>
+    <div class="absolute inset-0 flex flex-col justify-center items-start text-white px-12">
+      <h1 class="text-4xl font-bold mb-4">“Your journey starts here.”</h1>
+      <p class="text-lg max-w-sm">Discover unforgettable experiences and adventures with Travely.</p>
+    </div>
+  </div>
+
+  <!-- Right side with form -->
+  <div class="flex-1 flex items-center justify-center bg-gray-50">
+    <div class="bg-white shadow-lg rounded-lg max-w-md w-full p-8">
+      <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Log In</h2>
+      <form class="space-y-5">
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+          <input type="email" placeholder="you@example.com" 
+                 class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+          <input type="password" placeholder="••••••••" 
+                 class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+        </div>
+        <button type="submit" 
+                class="w-full bg-orange-500 text-white py-2 rounded-lg hover:bg-orange-600 transition">
+          Log In
+        </button>
+        <p class="text-sm text-gray-500 text-center">
+          Don’t have an account? <a href="#" class="text-orange-500 hover:underline">Sign Up</a>
+        </p>
+      </form>
+    </div>
+  </div>
+</div>

@@ -47,20 +47,20 @@ export default function Register()
 
     return(
         <>
-        <div className="min-h-[87vh] bg-cover bg-center relative flex justify-evenly p-[70px] " style={{backgroundImage : `url(${wallpaper})`}}>
+        <div className="min-h-[87vh] bg-cover bg-center gap-5 relative flex flex-wrap justify-evenly p-[40px] py-[70px] lg:p-[70px] " style={{backgroundImage : `url(${wallpaper})`}}>
 
             {/* Overlay Effect */}
             <div className="absolute bg-black/40 backdrop-blur-sm inset-0 z-0"></div>
 
             {/* Section One */}
-            <div className="w-[40vw] z-10 flex flex-col items-center justify-center -mt-10 ">
-                <img className=" h-[300px] w-[300px] -mb-8 " src={logo} />
+            <div className="w-full lg:w-[40vw] z-10 flex flex-col items-center justify-center -mt-10 ">
+                <img className=" h-[200px] w-[200px] lg:h-[300px] lg:w-[300px] -mb-8 " src={logo} />
                 <h2 className=" font-bold text-white text-[50px]">Travely</h2>
                 <p className="text-white text-[25px] italic">"{tagline}"</p>
             </div>
 
             {/* Section Two */}
-            <div className="w-[30vw] rounded-3xl bg-white shadow-lg backdrop-blur-md z-10 p-[40px] ">
+            <div className="w-full lg:w-[30vw] rounded-3xl bg-white shadow-lg backdrop-blur-md z-10 p-[40px] ">
 
                 <form className="flex flex-col gap-3  justify-center">
 
@@ -69,7 +69,7 @@ export default function Register()
                     {/* Email Address */}
                     <div className="flex flex-col gap-1">
                         <label>Email Address</label>
-                        <input className="p-[5px] w-[380px] px-[10px] border-gray-400 border focus:border-orange-400 rounded-md 
+                        <input className="p-[5px] w-full px-[10px] border-gray-400 border focus:border-orange-400 rounded-md 
                         outline-none " 
                         type="email" placeholder="Enter Your Email Address" />
                     </div>
@@ -79,7 +79,7 @@ export default function Register()
                         <label>Password</label>
                         <div className="relative">
                             <input className="p-[5px] px-[10px] pr-[38px] border-gray-400 border focus:border-orange-400 rounded-md 
-                            outline-none w-[380px] " 
+                            outline-none w-full " 
                             type={eye ? "text" : "password" } 
                             value={password}
                             onChange={handlePassword}
@@ -109,7 +109,7 @@ export default function Register()
                     {/* Google Sign In */}
                     <div className="flex gap-10 mt-2">
                         <button className="rounded-xl w-full flex justify-center gap-2 border border-black py-[10px] ">
-                            <img className="h-[30px] " src={google} /> 
+                            <img className="h-[25px] lg:h-[30px] " src={google} /> 
                             <div className="font-sans">Sign Up With <span className="font-semibold">Google</span></div>
                         </button>
                     </div>

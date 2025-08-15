@@ -21,9 +21,9 @@ export default function Header()
                         <Link to="/contact" className=" hover:text-[#FFA040] "><li>Contact</li></Link>
                     </ul>
                    <div className="mr-4"> 
-                        <button className=" text-white cursor-pointer rounded-xl pb-[8px] pt-[8px] pl-[16px] 
+                        <Link to="/login"> <button className=" text-white cursor-pointer rounded-xl pb-[8px] pt-[8px] pl-[16px] 
                         pr-[16px] bg-[#FF7A00] transition-all hover:bg-[#FFA040] hover:scale-105 active:scale-95 
-                        duration-200">Login</button>
+                        duration-200">Login</button></Link>
                     </div>
             </div>
 

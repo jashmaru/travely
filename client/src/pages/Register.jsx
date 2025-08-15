@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import travely from "../assets/logo.png";
 
-export default function Login()
+export default function Register()
 {
     const travelTaglines = [
         "Your Journey Begins Here",
@@ -29,7 +29,7 @@ export default function Login()
 
     const [eye ,setEye] = useState(false);
     const [password, setPassword] = useState("");
-    const [tagline, setTagline] = useState(travelTaglines[Math.floor(Math.random()*travelTaglines.length)]);
+    const [tagline] = useState(travelTaglines[Math.floor(Math.random()*travelTaglines.length)]);
     const [wallpaper] = useState(randomWallpaper[Math.floor(Math.random()*randomWallpaper.length)]);
     const google = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/800px-Google_%22G%22_logo.svg.png";
     const logo = travely;
@@ -47,7 +47,7 @@ export default function Login()
 
     return(
         <>
-        <div className="min-h-[87vh] bg-cover bg-center relative flex justify-evenly p-[70px]" style={{backgroundImage : `url(${wallpaper})`}}>
+        <div className="min-h-[87vh] bg-cover bg-center relative flex justify-evenly p-[70px] " style={{backgroundImage : `url(${wallpaper})`}}>
 
             {/* Overlay Effect */}
             <div className="absolute bg-black/40 backdrop-blur-sm inset-0 z-0"></div>
@@ -64,7 +64,7 @@ export default function Login()
 
                 <form className="flex flex-col gap-3  justify-center">
 
-                    <h2 className="text-[28px] font-bold text-[#FF7A00] ">Login</h2>
+                    <h2 className="text-[28px] font-bold text-[#FF7A00] ">Register</h2>
 
                     {/* Email Address */}
                     <div className="flex flex-col gap-1">
@@ -87,16 +87,15 @@ export default function Login()
                             <button type="button" onClick={eyeOff} className="text-black/40 
                             inset-y-0 right-2 absolute">{eye ? <EyeOff/> : <Eye/> }</button>
                         </div>
-                        <div className="text-blue-900 text-[13px] ml-1 ">Forgot Password ?</div>
                     </div>
 
-                    {/* Sign In */}
-                    <div className="flex flex-col gap-1">
+                    {/* Sign Up */}
+                    <div className="flex flex-col mt-2 gap-1">
                         <button className="flex w-full bg-[#FF7A00] justify-center text-white rounded-xl p-[4px] pb-[6px]">
-                            Sign In
+                            Sign Up
                         </button>
-                        <div className=" text-gray-500 text-[13px] text-center">Don't Have Account ? 
-                            <Link className="text-blue-900" to="/register"> Click Here</Link>
+                        <div className=" text-gray-500 text-[13px] text-center">Already Have Account ? 
+                            <Link className="text-blue-900" to="/login"> Click Here</Link>
                         </div>
                     </div>
 
@@ -111,7 +110,7 @@ export default function Login()
                     <div className="flex gap-10 mt-2">
                         <button className="rounded-xl w-full flex justify-center gap-2 border border-black py-[10px] ">
                             <img className="h-[30px] " src={google} /> 
-                            <div className="font-sans">Sign In With <span className="font-semibold">Google</span></div>
+                            <div className="font-sans">Sign Up With <span className="font-semibold">Google</span></div>
                         </button>
                     </div>
 

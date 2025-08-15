@@ -9,6 +9,7 @@ import Treks from './pages/Treks.jsx'
 import Contact from './pages/Contact.jsx'
 import Search from './pages/Search.jsx'
 import Login from './pages/Login.jsx'
+import Register from './pages/Register.jsx'
 import './index.css'
 
 
@@ -24,6 +25,7 @@ createRoot(document.getElementById('root')).render(
           <Route path='contact' element={<Contact/>} />
           <Route path="search" element={<Search />} />
           <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
         </Route>
       </Routes>
     </BrowserRouter>

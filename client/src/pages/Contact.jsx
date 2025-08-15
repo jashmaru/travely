@@ -9,9 +9,9 @@ export default function Contact()
                 <h1 className="font-bold text-[50px] capitalize ">Get in touch</h1>
                 <p className="text-center">Have questions about our tours, treks, or travel packages?<br/> We are here to help you plan your next adventure.</p>
             </div>
-            <div className="Contact-Details flex justify-evenly p-[50px] bg-gray-50 ">
+            <div className="Contact-Details flex flex-wrap gap-10 justify-evenly p-[20px] lg:p-[50px] bg-gray-50 ">
 
-                <div className="Box-One flex flex-col bg-white shadow-md backdrop-blur-sm rounded-xl p-[50px] gap-5 w-[40vw] ">
+                <div className="Box-One flex flex-col bg-white shadow-md backdrop-blur-sm rounded-xl p-[50px] gap-5 w-full lg:w-[40vw] ">
                     <h3 className="font-bold text-[25px] text-[#FF7A00] ">Our Contact Information</h3>
                     <p className="text-gray-500 ">Feel free to reach out to us through any of the methods below.</p>
 
@@ -46,7 +46,7 @@ export default function Contact()
 
                 </div>
 
-                <div className="Box-Two flex flex-col bg-white shadow-md backdrop-blur-sm rounded-xl p-[50px] gap-5 w-[40vw] ">
+                <div className="Box-Two flex flex-col bg-white shadow-md backdrop-blur-sm rounded-xl p-[50px] gap-5 w-full lg:w-[40vw] ">
                     <h3 className="font-bold text-[25px] text-[#FF7A00] ">Send Us Message</h3>
                     <form className="flex flex-col gap-5">
                         <div className="flex flex-col gap-1">

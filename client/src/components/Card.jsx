@@ -56,3 +56,16 @@ import { Link } from "react-router-dom";
             </>
     );
  }
+
+ export function TeamCard({name,position,img})
+ {
+    return(
+        <>
+            <div class="bg-white p-6 rounded-lg shadow text-center hover:shadow-lg transition">
+                <img src={img} class="w-24 h-24 rounded-full mx-auto mb-4"/>
+                <h4 class="font-semibold">{name}</h4>
+                <p class="text-gray-500 text-sm">{position}</p>
+            </div>
+        </>
+    );
+ };

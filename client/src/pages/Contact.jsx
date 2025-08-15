@@ -48,7 +48,7 @@ export default function Contact()
 
                 <div className="Box-Two flex flex-col bg-white shadow-md backdrop-blur-sm rounded-xl p-[50px] gap-5 w-[40vw] ">
                     <h3 className="font-bold text-[25px] text-[#FF7A00] ">Send Us Message</h3>
-                    <form className="flex flex-col gap-5" action="submit">
+                    <form className="flex flex-col gap-5">
                         <div className="flex flex-col gap-1">
                             <label>Full Name</label>
                             <input className="p-[5px] px-[10px] border-gray-400 border focus:border-orange-400 rounded-md 
@@ -77,7 +77,7 @@ export default function Contact()
                             type="text" placeholder="Enter Your Message" />
                         </div>
 
-                        <button className="w-full rounded-lg text-white p-[10px] bg-[#FF7A00] "
+                        <button className="w-full rounded-lg text-white p-[10px] bg-[#FF7A00] hover:bg-orange-400"
                         type="submit" value="submit">
                             Submit
                         </button>

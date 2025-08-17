@@ -10,6 +10,7 @@ import Contact from './pages/Contact.jsx'
 import Search from './pages/Search.jsx'
 import Login from './pages/Login.jsx'
 import Register from './pages/Register.jsx'
+import Package from './pages/Package.jsx'
 import './index.css'
 
 
@@ -26,6 +27,7 @@ createRoot(document.getElementById('root')).render(
           <Route path="search" element={<Search />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
+          <Route path=":type/:id" element={<Package />} />
         </Route>
       </Routes>
     </BrowserRouter>

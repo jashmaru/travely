@@ -7,6 +7,7 @@ import testimonials from "./routes/testimonials.routes.js";
 import search from "./routes/search.routes.js";
 import tours from "./routes/tours.routes.js";
 import treks from "./routes/treks.routes.js";
+import packageByType from "./routes/package.routes.js";
 
 const app = express();
 const port = 3000;
@@ -22,6 +23,7 @@ app.use("/api",testimonials);
 app.use("/api",search);
 app.use("/api",tours);
 app.use("/api",treks);
+app.use("/api",packageByType);
 
 
 const server = app.listen(port,()=>{

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import BasicDetailsIcons from "./BasicDetailsIcons";
 import IncludesSection from "./IncludesSection";
+import RightSection from "./RightSection";
 
 export default function Package() {
   const { type, id } = useParams();
@@ -41,10 +42,10 @@ export default function Package() {
         </div>
 
         {/* Package Content & Booking Inquiry Or Booking */}
-        <div className="flex bg-gray-100 gap-10 p-[50px]">
+        <div className="flex bg-gray-100 gap-[50px] p-[50px]">
 
             {/* Left Content */}
-            <div className="w-[70vw] h-[80vh] rounded-2xl flex flex-col gap-6 bg-inherit">
+            <div className="w-[70vw] flex flex-col gap-10 bg-inherit">
 
                 {/* Section One */}
                 <BasicDetailsIcons duration={data.duration} season={data.best_season} age={data.age_range}/>
@@ -52,16 +53,14 @@ export default function Package() {
                 {/* Section Two - Includes Icons */}
                 <IncludesSection />
 
+                {/* Right Section Four In Mobile View */}
+                <RightSection className="md:hidden w-full gap-4" price={data.price} />
+
             </div>
 
             {/* Right Content Sticky */}
-            <div className="w-[30vw] h-[36vh] rounded-2xl bg-white shadow-xl border border-gray-300
-            backdrop-blur-sm sticky self-start top-10">
-
-            </div>
-
+            <RightSection className="hidden md:block w-[30vw] " price={data.price} />
         </div>
-        
       </div>
     </>
   );

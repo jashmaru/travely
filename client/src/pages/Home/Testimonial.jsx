@@ -87,7 +87,7 @@ export default function TestimonialSection()
 
     return(
         <>
-            <div className="Testimonial-Section flex flex-col w-full gap-8 min-h-[70vh] p-[50px] lg:p-[55px]  ">
+            <div className="Testimonial-Section flex flex-col w-full gap-10 p-[50px] lg:p-[55px]  ">
 
                 <div className="Heading font-bold text-4xl font-sans ">Testimonial Section</div>
                 
